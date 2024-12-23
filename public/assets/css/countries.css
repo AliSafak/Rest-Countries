@@ -1,0 +1,147 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    background-color: white;
+    font-family:"Nunito Sans";
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    padding: 30px 16px;
+    color: #111517;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Görünmez shadow */
+    margin-bottom: 24px;
+}
+
+.header img {
+    width: 100%;
+    display: block;
+    padding-right: 20px;
+}
+
+.header-right-side {
+    display: flex;
+    align-items: center;
+    word-break: inherit;
+}
+
+.header h1 {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+}
+
+input {
+    display: block;
+    padding-block: 16px;
+    background: url("../img/grey-search-icon.png");
+    background-repeat: no-repeat;
+    background-position: 32px;
+    width: 100%;
+    margin-bottom:40px;
+    padding-left: 74px;
+    color: #C4C4C4;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Görünmez shadow */
+}
+
+.container {
+    padding-inline: 24px;
+}
+
+.cart-inner {
+    padding-inline: 32px;
+}
+
+.country {
+    background-color: red;
+    border-radius: 10px;
+    text-align: calc(100% +24px);
+}
+
+.country img {
+    border-radius: 5px;
+}
+
+
+.cart-inner {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 40px;
+}
+
+.country h1 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    color: #111517;
+}
